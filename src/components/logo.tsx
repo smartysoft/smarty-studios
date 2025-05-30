@@ -1,12 +1,6 @@
 import { cn } from "../lib/utils";
 
-export const Logo = ({
-  className,
-  uniColor,
-}: {
-  className?: string;
-  uniColor?: boolean;
-}) => {
+export const Logo = ({ className }: { className?: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
