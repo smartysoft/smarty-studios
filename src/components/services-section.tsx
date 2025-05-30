@@ -14,7 +14,7 @@ import {
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { BorderBeam } from "@/components/magicui/border-beam";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 export default function ServicesSection() {
   type ImageKey = "item-1" | "item-2" | "item-3" | "item-4";

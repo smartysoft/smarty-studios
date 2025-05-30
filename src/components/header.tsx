@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 const menuItems = [
   { name: "Services", href: "/services" },
   { name: "Projects", href: "/projects" },
+  { name: "Customers", href: "/customers" },
   { name: "About", href: "/about" },
 ];
 
