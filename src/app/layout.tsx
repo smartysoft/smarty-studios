@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import FooterSection from "@/components/footer";
 import { HeroHeader } from "@/components/header";
 import Script from "next/script";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const interSans = Inter({
+  variable: "--font-inter-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const interMono = Inter_Tight({
+  variable: "--font-inter-mono",
   subsets: ["latin"],
 });
 
@@ -38,7 +38,7 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} dark antialiased`}
+        className={`${interSans.variable} ${interMono.variable} dark antialiased`}
       >
         <HeroHeader />
         {children}

@@ -6,10 +6,10 @@ const links = [
     title: "Services",
     href: "/services",
   },
-  {
-    title: "Projects",
-    href: "/projects",
-  },
+  // {
+  //   title: "Projects",
+  //   href: "/projects",
+  // },
   {
     title: "Customers",
     href: "/customers",
@@ -40,7 +40,7 @@ export default function FooterSection() {
           ))}
         </div>
         <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
-          <Link
+          {/* <Link
             href="#"
             target="_blank"
             rel="noopener noreferrer"
@@ -59,9 +59,9 @@ export default function FooterSection() {
                 d="M10.488 14.651L15.25 21h7l-7.858-10.478L20.93 3h-2.65l-5.117 5.886L8.75 3h-7l7.51 10.015L2.32 21h2.65zM16.25 19L5.75 5h2l10.5 14z"
               ></path>
             </svg>
-          </Link>
+          </Link> */}
           <Link
-            href="#"
+            href="https://www.linkedin.com/company/smarty-software-services"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -80,7 +80,7 @@ export default function FooterSection() {
               ></path>
             </svg>
           </Link>
-          <Link
+          {/* <Link
             href="#"
             target="_blank"
             rel="noopener noreferrer"
@@ -99,8 +99,8 @@ export default function FooterSection() {
                 d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
               ></path>
             </svg>
-          </Link>
-          <Link
+          </Link> */}
+          {/* <Link
             href="#"
             target="_blank"
             rel="noopener noreferrer"
@@ -124,9 +124,9 @@ export default function FooterSection() {
                 color="currentColor"
               ></path>
             </svg>
-          </Link>
+          </Link> */}
           <Link
-            href="#"
+            href="https://www.instagram.com/smarty.yazilim"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -145,7 +145,7 @@ export default function FooterSection() {
               ></path>
             </svg>
           </Link>
-          <Link
+          {/* <Link
             href="#"
             target="_blank"
             rel="noopener noreferrer"
@@ -164,11 +164,17 @@ export default function FooterSection() {
                 d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"
               ></path>
             </svg>
-          </Link>
+          </Link> */}
         </div>
+        <span className="text-muted-foreground block text-center text-sm pb-4">
+          Yakuplu Mah. Geçit Sok. No:17/A NO:5 Vera Plaza
+          <br />
+          Beylikdüzü, Istanbul, Turkey
+        </span>
+
         <span className="text-muted-foreground block text-center text-sm">
-          {" "}
-          © {new Date().getFullYear()} Tailark, All rights reserved
+          © {new Date().getFullYear()} Smarty Software Studios, All rights
+          reserved
         </span>
       </div>
     </footer>

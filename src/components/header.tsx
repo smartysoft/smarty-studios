@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 const menuItems = [
   { name: "Services", href: "/services" },
-  { name: "Projects", href: "/projects" },
+  // { name: "Projects", href: "/projects" },
   { name: "Customers", href: "/customers" },
   { name: "About", href: "/about" },
 ];
@@ -89,7 +89,7 @@ export const HeroHeader = () => {
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <Button asChild size="sm">
-                  <Link href="#">
+                  <Link href="/estimate-project">
                     <span>Estimate Project</span>
                   </Link>
                 </Button>
