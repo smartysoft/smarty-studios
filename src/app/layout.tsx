@@ -152,6 +152,7 @@ export default function RootLayout({
         className={`${interSans.variable} ${interMono.variable} dark antialiased`}
       >
         <HeroHeader />
+
         {children}
         <FooterSection />
       </body>
