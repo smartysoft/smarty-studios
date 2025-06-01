@@ -1,5 +1,40 @@
 import CustomersSection from "@/app/customers/customers-section";
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Customers - Trusted Software Development Partners",
+  description:
+    "Meet our satisfied customers and clients. Smarty Software Studios works with startups to enterprises, delivering quality mobile apps, web development, and custom software solutions.",
+  keywords: [
+    "software development clients",
+    "satisfied customers",
+    "client testimonials",
+    "software development partners",
+    "mobile app clients",
+    "web development customers",
+    "enterprise software clients",
+    "startup development partners",
+    "smarty software clients",
+    "müşterilerimiz",
+    "yazılım müşterileri",
+    "başarılı projeler",
+  ],
+  openGraph: {
+    title: "Our Customers - Smarty Software Studios",
+    description:
+      "Meet our satisfied customers and see how we help businesses succeed with quality software development solutions.",
+    url: "https://smartystudios.com/customers",
+  },
+  twitter: {
+    title: "Our Customers - Smarty Software Studios",
+    description:
+      "Meet our satisfied customers and see how we help businesses succeed with quality software development solutions.",
+  },
+  alternates: {
+    canonical: "https://smartystudios.com/customers",
+  },
+};
 
 export default function Customers() {
   return (
@@ -15,7 +50,7 @@ export default function Customers() {
           </p>
         </div>
       </div>
-      <CustomersSection isMainPage={false} />;
+      <CustomersSection isMainPage={false} />
     </section>
   );
 }

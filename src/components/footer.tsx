@@ -167,9 +167,18 @@ export default function FooterSection() {
           </Link> */}
         </div>
         <span className="text-muted-foreground block text-center text-sm pb-4">
+          <span className="font-bold">Phone:</span> 0212 709 97 26
+          <br />
+          <span className="font-bold">Mobile:</span> 0551 860 20 15
+          <br />
+          <span className="font-bold">Email:</span> info@smartystudios.com
+        </span>
+
+        <span className="text-muted-foreground block text-center text-sm pb-4">
+          <span className="font-bold">Address:</span>
           Yakuplu Mah. Geçit Sok. No:17/A NO:5 Vera Plaza
           <br />
-          Beylikdüzü, Istanbul, Turkey
+          Beylikdüzü, Istanbul, Türkiye
         </span>
 
         <span className="text-muted-foreground block text-center text-sm">

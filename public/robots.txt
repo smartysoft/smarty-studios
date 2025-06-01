@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://smartystudios.com/sitemap.xml
+
+# Disallow crawling of admin or private areas (if any)
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /api/
+
+# Allow crawling of important pages
+Allow: /about
+Allow: /services
+Allow: /projects
+Allow: /customers
+Allow: /estimate-project 
