@@ -9,7 +9,7 @@ export default function CustomersSection({
   isMainPage: boolean;
 }) {
   return (
-    <section className="bg-background pb-16 pt-16 md:pb-32">
+    <section className="bg-background pb-16 pt-16 md:pb-32  ">
       <div className="group relative m-auto max-w-5xl px-6">
         {isMainPage && (
           <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
@@ -30,63 +30,95 @@ export default function CustomersSection({
           }`}
         >
           <div className="flex">
-            <Image
-              className="mx-auto h-7 w-fit"
-              src="/axya-white.svg"
-              alt="Axya Logo"
-              height="20"
-              width={100}
-            />
+            <a href="https://axya.co" target="_blank" rel="noopener noreferrer">
+              <Image
+                className="mx-auto h-7 w-fit"
+                src="/axya-white.svg"
+                alt="Axya Logo"
+                height={150}
+                width={300}
+              />
+            </a>
           </div>
 
           <div className="flex">
-            <Image
-              className="mx-auto h-7 w-fit"
-              src="/paynet-white.png"
-              alt="Paynet Logo"
-              height="20"
-              width={100}
-            />
+            <a
+              href="https://paynet.com.tr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                className="mx-auto h-7 w-fit"
+                src="/paynet-white.png"
+                alt="Paynet Logo"
+                height={150}
+                width={300}
+              />
+            </a>
           </div>
 
           <div className="flex">
-            <Image
-              className="mx-auto h-7  w-fit"
-              src="/sdn.webp"
-              alt="SDN Logo"
-              height="150"
-              width={300}
-            />
+            <a
+              href="https://shiftdelete.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                className="mx-auto h-7 w-fit"
+                src="/sdn.webp"
+                alt="SDN Logo"
+                height={150}
+                width={300}
+              />
+            </a>
           </div>
 
           <div className="flex">
-            <Image
-              className="mx-auto h-7 w-fit"
-              src="/rayon.png"
-              alt="Rayon Logo"
-              height="150"
-              width={300}
-            />
+            <a
+              href="https://www.linkedin.com/company/rayonstudios"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                className="mx-auto h-7 w-fit"
+                src="/rayon.png"
+                alt="Rayon Logo"
+                height={150}
+                width={300}
+              />
+            </a>
           </div>
 
           <div className="flex">
-            <Image
-              className="mx-auto h-7 w-fit"
-              src="/censys.png"
-              alt="Censys Logo"
-              height="150"
-              width={300}
-            />
+            <a
+              href="https://censys.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                className="mx-auto h-7 w-fit"
+                src="/censys.png"
+                alt="Censys Logo"
+                height={150}
+                width={300}
+              />
+            </a>
           </div>
 
           <div className="flex">
-            <Image
-              className="mx-auto h-7 w-fit"
-              src="/aily-logo.svg"
-              alt="Aily Logo"
-              height="150"
-              width={300}
-            />
+            <a
+              href="https://ailylabs.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                className="mx-auto h-7 w-fit"
+                src="/aily-logo.svg"
+                alt="Aily Logo"
+                height={150}
+                width={300}
+              />
+            </a>
           </div>
         </div>
       </div>

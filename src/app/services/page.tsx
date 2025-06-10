@@ -39,5 +39,5 @@ export const metadata: Metadata = {
 };
 
 export default function Services() {
-  return <ServicesSection />;
+  return <ServicesSection className="z-10" />;
 }

@@ -154,6 +154,7 @@ export default function RootLayout({
         <HeroHeader />
 
         {children}
+
         <FooterSection />
       </body>
     </html>
