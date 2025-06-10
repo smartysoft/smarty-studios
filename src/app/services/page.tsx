@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     description:
       "Professional software development services: mobile apps, web development, backend solutions, and custom software consulting.",
   },
+
   alternates: {
     canonical: "https://smartystudios.com/services",
   },
