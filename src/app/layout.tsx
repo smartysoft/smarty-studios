@@ -88,8 +88,24 @@ export const metadata: Metadata = {
   },
   category: "technology",
   classification: "Software Development Company",
+  manifest: "/manifest.json",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+  ],
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
+  verification: {
+    google: "your-google-verification-code", // Google Search Console'dan alacağınız kod
+    yandex: "your-yandex-verification-code", // Yandex Webmaster'dan alacağınız kod
+  },
   other: {
     "google-site-verification": "your-google-verification-code",
+    "msapplication-TileColor": "#000000",
+    "msapplication-config": "/browserconfig.xml",
   },
 };
 

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OG Image Generator</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background: #f0f0f0;
+      }
+
+      .og-image {
+        width: 1200px;
+        height: 630px;
+        background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0 auto;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .logo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+      }
+
+      .title {
+        font-size: 64px;
+        font-weight: 800;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .subtitle {
+        font-size: 32px;
+        color: #cccccc;
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: 500;
+      }
+
+      .services {
+        font-size: 24px;
+        color: #888888;
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .website {
+        font-size: 20px;
+        color: #666666;
+        position: absolute;
+        bottom: 40px;
+        right: 60px;
+      }
+
+      .decorations {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .dot {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+      }
+
+      .dot-1 {
+        width: 8px;
+        height: 8px;
+        top: 120px;
+        right: 200px;
+      }
+      .dot-2 {
+        width: 6px;
+        height: 6px;
+        top: 180px;
+        right: 150px;
+      }
+      .dot-3 {
+        width: 4px;
+        height: 4px;
+        top: 100px;
+        right: 100px;
+      }
+      .dot-4 {
+        width: 6px;
+        height: 6px;
+        bottom: 180px;
+        left: 100px;
+      }
+      .dot-5 {
+        width: 4px;
+        height: 4px;
+        bottom: 150px;
+        left: 150px;
+      }
+      .dot-6 {
+        width: 8px;
+        height: 8px;
+        bottom: 200px;
+        left: 80px;
+      }
+
+      .instructions {
+        max-width: 1200px;
+        margin: 40px auto 0;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .instructions h3 {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .instructions ol {
+        color: #666;
+        line-height: 1.6;
+      }
+
+      .instructions code {
+        background: #f5f5f5;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="og-image">
+      <div class="decorations">
+        <div class="dot dot-1"></div>
+        <div class="dot dot-2"></div>
+        <div class="dot dot-3"></div>
+        <div class="dot dot-4"></div>
+        <div class="dot dot-5"></div>
+        <div class="dot dot-6"></div>
+      </div>
+
+      <div class="logo">
+        <img src="public/logo.png" alt="Smarty Studios Logo" />
+      </div>
+
+      <div class="title">Smarty Software Studios</div>
+      <div class="subtitle">Professional Software Development</div>
+      <div class="services">Mobile • Web • Backend • Consulting</div>
+
+      <div class="website">smartystudios.com</div>
+    </div>
+
+    <div class="instructions">
+      <h3>🎨 OG Image Oluşturma Talimatları:</h3>
+      <ol>
+        <li>Bu HTML dosyasını tarayıcıda açın</li>
+        <li>Sayfayı tam ekran yapın (F11)</li>
+        <li>Tarayıcının geliştirici araçlarını açın (F12)</li>
+        <li>
+          Console'da şu komutu çalıştırın: <br /><code
+            >document.querySelector('.instructions').style.display =
+            'none'</code
+          >
+        </li>
+        <li>Sayfanın ekran görüntüsünü alın ya da:</li>
+        <li>
+          <strong>Chrome/Edge:</strong> Geliştirici araçları > Device Mode >
+          1200x630 ayarlayın > Screenshot alın
+        </li>
+        <li>
+          <strong>Firefox:</strong> Geliştirici araçları > Responsive Design
+          Mode > 1200x630 > Screenshot
+        </li>
+        <li>Görüntüyü <code>og-image.jpg</code> olarak kaydedin</li>
+        <li><code>public/</code> dizinine taşıyın</li>
+      </ol>
+
+      <h3>🚀 Alternatif Yöntemler:</h3>
+      <ul>
+        <li>
+          <strong>Online:</strong>
+          <a href="https://www.figma.com" target="_blank">Figma</a>,
+          <a href="https://www.canva.com" target="_blank">Canva</a>
+        </li>
+        <li>
+          <strong>AI:</strong>
+          <a href="https://openai.com/dall-e-2" target="_blank">DALL-E</a>,
+          <a href="https://midjourney.com" target="_blank">Midjourney</a>
+        </li>
+        <li>
+          <strong>Kod:</strong>
+          <a href="https://github.com/vercel/og" target="_blank">@vercel/og</a>
+          kullanarak dinamik oluşturma
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
