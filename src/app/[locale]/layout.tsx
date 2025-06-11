@@ -100,7 +100,7 @@ export async function generateMetadata({
     description: siteDescriptions.short,
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: `${companyInfo.name} - ${
@@ -121,7 +121,7 @@ export async function generateMetadata({
         : "Professional Software Development"
     }`,
     description: siteDescriptions.twitter,
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
     creator: companyInfo.twitter,
   };
 
