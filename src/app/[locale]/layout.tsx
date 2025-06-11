@@ -314,7 +314,7 @@ export default async function RootLayout({
 
         <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-4753ZHETCZ"
+          src="https://www.googletagmanager.com/gtag/js?id=G-JVTNYRYWQT"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -322,15 +322,7 @@ export default async function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-4753ZHETCZ');
-          `}
-        </Script>
-        <Script id="google-ads" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-XXXXXXXXXX');
+            gtag('config', 'G-JVTNYRYWQT');
           `}
         </Script>
       </head>
