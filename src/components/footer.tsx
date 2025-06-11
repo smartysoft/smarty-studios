@@ -82,11 +82,11 @@ export default async function FooterSection() {
           </Link>
         </div>
         <span className="text-muted-foreground block text-center text-sm pb-4">
-          <span className="font-bold">Phone:</span> 0212 709 97 26
+          <span className="font-bold">Phone:</span>{" "}
+          <a href="tel:+905518602015">0551 860 20 15</a>
           <br />
-          <span className="font-bold">Mobile:</span> 0551 860 20 15
-          <br />
-          <span className="font-bold">Email:</span> info@smartystudios.com
+          <span className="font-bold">Email:</span>{" "}
+          <a href="mailto:info@smartystudios.com">info@smartystudios.com</a>
         </span>
 
         <span className="text-muted-foreground block text-center text-sm pb-4">
