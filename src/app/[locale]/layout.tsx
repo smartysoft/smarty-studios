@@ -44,7 +44,7 @@ const SEO_KEYWORDS = [
   "software engineering",
 ];
 
-// Company Information Base
+// Company Information Base2
 const COMPANY_INFO_BASE = {
   url: "https://smartystudios.com",
   twitter: "@smartysoftware",
