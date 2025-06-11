@@ -4,10 +4,12 @@ import "../globals.css";
 import FooterSection from "@/components/footer";
 import { HeroHeader } from "@/components/header";
 import Script from "next/script";
-import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getMessages } from "next-intl/server";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 // Font configurations
 const interSans = Inter({
@@ -159,6 +161,10 @@ export async function generateMetadata({
     // Site Configuration
     alternates: {
       canonical: companyInfo.url,
+      languages: {
+        tr: "https://smarty-studios.com/tr",
+        en: "https://smarty-studios.com/en",
+      },
     },
     category: "technology",
     classification:
@@ -169,13 +175,13 @@ export async function generateMetadata({
 
     // Verification Codes
     verification: {
-      google: "your-google-verification-code",
+      google: "google-site-verification-code",
       yandex: "36c67b414cae9bcf",
     },
 
     // Additional Meta Tags
     other: {
-      "google-site-verification": "your-google-verification-code",
+      "google-site-verification": "google-site-verification-code",
       "msapplication-TileColor": "#000000",
       "msapplication-config": "/browserconfig.xml",
     },
@@ -257,14 +263,17 @@ export default async function RootLayout({
   children,
   params,
 }: RootLayoutProps) {
-  // Validate locale parameter
   const { locale } = await params;
-  if (!hasLocale(routing.locales, locale)) {
+  const t = await getTranslations({ locale });
+  const messages = await getMessages();
+
+  if (!locale || !["tr", "en"].includes(locale)) {
     notFound();
   }
 
+  const structuredData = createStructuredData(locale, t("company.name"));
+
   // Get translations for header
-  const t = await getTranslations();
   const headerTranslations = {
     navbar: {
       services: t("navbar.services"),
@@ -276,11 +285,17 @@ export default async function RootLayout({
     },
   };
 
-  const structuredData = createStructuredData(locale, t("company.name"));
-
   return (
     <html lang={locale}>
       <head>
+        <script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="a4eaeb4f-ba1c-497e-bc97-61c943eb3bdc"
+          type="text/javascript"
+          async
+        ></script>
+
         {/* Analytics Script */}
         <Script
           defer
@@ -290,23 +305,47 @@ export default async function RootLayout({
         />
 
         {/* Structured Data for SEO */}
-        <Script
-          id="structured-data"
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData),
           }}
         />
+
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-4753ZHETCZ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-4753ZHETCZ');
+          `}
+        </Script>
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-XXXXXXXXXX');
+          `}
+        </Script>
       </head>
 
       <body
         className={`${interSans.variable} ${interMono.variable} dark antialiased`}
       >
-        <NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <HeroHeader translations={headerTranslations} />
           {children}
           <FooterSection />
         </NextIntlClientProvider>
+        <Analytics />
+        <SpeedInsights />
+        <GoogleTagManager gtmId="GTM-XXXXXXXX" />
       </body>
     </html>
   );
