@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "title": "We Turn Code into Business Value",
+    "subtitle": "From product strategy to scalable solutions — we help you build software that delivers real impact.",
+    "cta": "Start Building"
+  },
+  "customers": {
+    "title": "Our Customers",
+    "subtitle": "Meet our satisfied customers and see how we help businesses succeed with quality software development solutions."
+  },
+  "footer": {
+    "title": "Smarty Software Studios",
+    "subtitle": "Professional software development, consulting, mobile and web development services.",
+    "copyright": "© 2025 Smarty Software Studios. All rights reserved."
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "estimateProject": {
+    "title": "Estimate Your Project",
+    "subtitle": "Tell us about your project and we'll get back to you with a free estimate.",
+    "cta": "Estimate Now"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "We are a software development company that helps businesses succeed with quality software development solutions."
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We offer a wide range of software development services to help businesses succeed with quality software development solutions."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help you with your software development needs. Contact us today to get started."
+  }
+}

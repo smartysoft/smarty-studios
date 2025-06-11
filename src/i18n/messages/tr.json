@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "title": "Yazılımı İş Başarısına Dönüştürüyoruz",
+    "subtitle": "Fikir aşamasından ölçeklenebilir çözümlere — işinize gerçek değer katan yazılımlar geliştiriyoruz.",
+    "cta": "Projeye Başla"
+  },
+  "customers": {
+    "title": "Referanslarımız",
+    "subtitle": "Başarı hikayelerimizi ve müşterilerimizin deneyimlerini keşfedin. Her projede fark yaratan çözümler sunuyoruz."
+  },
+  "footer": {
+    "title": "Smarty Software Studios",
+    "subtitle": "Uzman kadromuzla mobil, web ve kurumsal yazılım geliştirme hizmetleri sunuyoruz.",
+    "copyright": "© 2025 Smarty Software Studios. Tüm hakları saklıdır."
+  },
+  "navbar": {
+    "home": "Ana Sayfa",
+    "about": "Biz Kimiz",
+    "services": "Çözümlerimiz",
+    "contact": "Bize Ulaşın"
+  },
+  "estimateProject": {
+    "title": "Projenizi Konuşalım",
+    "subtitle": "Hayalinizdeki projeyi birlikte hayata geçirelim. Size özel fiyat teklifimizi hemen iletelim.",
+    "cta": "Teklif Al"
+  },
+  "about": {
+    "title": "Biz Kimiz?",
+    "subtitle": "Yenilikçi ve sürdürülebilir yazılım çözümleriyle işletmenizi geleceğe taşıyoruz. Her projede en iyisini hedefliyoruz."
+  },
+  "services": {
+    "title": "Çözümlerimiz",
+    "subtitle": "Modern teknolojiler ve yaratıcı yaklaşımlarla işinize değer katan yazılım çözümleri geliştiriyoruz."
+  },
+  "contact": {
+    "title": "Bize Ulaşın",
+    "subtitle": "Projenizi konuşmak için sabırsızlanıyoruz. Hemen iletişime geçin, size en uygun çözümü birlikte bulalım."
+  }
+}

@@ -1,4 +1,4 @@
-import CustomersSection from "@/app/customers/customers-section";
+import CustomersSection from "@/app/[locale]/customers/customers-section";
 import React from "react";
 import { Metadata } from "next";
 

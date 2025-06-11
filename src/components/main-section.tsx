@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { TextEffect } from "@/components/ui/text-effect";
 import { AnimatedGroup } from "@/components/ui/animated-group";
-import CustomersSection from "../app/customers/customers-section";
+import CustomersSection from "../app/[locale]/customers/customers-section";
 
 const transitionVariants = {
   item: {

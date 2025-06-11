@@ -1,4 +1,4 @@
-import WhoWeAreSection from "@/app/about/who-we-are-section";
+import WhoWeAreSection from "@/app/[locale]/about/who-we-are-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

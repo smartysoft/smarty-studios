@@ -1,4 +1,4 @@
-import ServicesSection from "@/app/services/services-section";
+import ServicesSection from "@/app/[locale]/services/services-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
