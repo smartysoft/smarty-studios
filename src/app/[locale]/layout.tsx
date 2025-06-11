@@ -9,7 +9,7 @@ import { notFound } from "next/navigation";
 import { getTranslations, getMessages } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 // Font configurations
 const interSans = Inter({
@@ -311,20 +311,6 @@ export default async function RootLayout({
             __html: JSON.stringify(structuredData),
           }}
         />
-
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-JVTNYRYWQT"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-JVTNYRYWQT');
-          `}
-        </Script>
       </head>
 
       <body
@@ -337,7 +323,7 @@ export default async function RootLayout({
         </NextIntlClientProvider>
         <Analytics />
         <SpeedInsights />
-        <GoogleTagManager gtmId="GTM-XXXXXXXX" />
+        <GoogleAnalytics gaId="G-JVTNYRYWQT" />
       </body>
     </html>
   );
