@@ -2,12 +2,15 @@ import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { getTranslations } from "next-intl/server";
 
-export default function CustomersSection({
+export default async function CustomersSection({
   isMainPage,
 }: {
   isMainPage: boolean;
 }) {
+  const t = await getTranslations();
+
   return (
     <section className="bg-background pb-16 pt-16 md:pb-32  ">
       <div className="group relative m-auto max-w-5xl px-6">
@@ -17,7 +20,7 @@ export default function CustomersSection({
               href="/customers"
               className="block text-sm duration-150 hover:opacity-75"
             >
-              <span> Meet Our Customers</span>
+              <span>{t("customers.meetOurCustomers")}</span>
 
               <ChevronRight className="ml-1 inline-block size-3" />
             </Link>

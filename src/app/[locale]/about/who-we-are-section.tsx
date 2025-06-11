@@ -1,46 +1,48 @@
 import { Cpu, Zap } from "lucide-react";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
-export default function WhoWeAreSection() {
+export default async function WhoWeAreSection() {
+  const t = await getTranslations();
+
   return (
     <section className="py-8 md:py-16">
       <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
         <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl">
-          Who We Are
+          {t("about.whoWeAre.title")}
         </h2>
         <div className="relative">
           <div className="relative z-10 space-y-4 md:w-1/2">
             <p className="text-body">
-              Smarty is a software development and consulting company helping{" "}
+              {t("about.whoWeAre.description1")}{" "}
               <span className="text-title font-medium">
-                fast-growing startups and enterprises
+                {t("about.whoWeAre.description1Highlight")}
               </span>{" "}
-              turn ideas into fully functional digital products. With a team of
-              experienced engineers and product thinkers, we deliver frontend
-              and backend solutions that scale — both technically and
-              commercially.
+              {t("about.whoWeAre.description1Continue")}
             </p>
-            <p>Founded by engineers, built for business impact.</p>
+            <p>{t("about.whoWeAre.description2")}</p>
 
             <div className="grid grid-cols-2 gap-3 pt-6 sm:gap-4">
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
                   <Zap className="size-4" />
-                  <h3 className="text-sm font-medium">Reliable Delivery</h3>
+                  <h3 className="text-sm font-medium">
+                    {t("about.whoWeAre.reliableDelivery.title")}
+                  </h3>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  We deliver projects on time, with clean code and clear
-                  communication — every single time.
+                  {t("about.whoWeAre.reliableDelivery.description")}
                 </p>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <Cpu className="size-4" />
-                  <h3 className="text-sm font-medium">Smart Engineering</h3>
+                  <h3 className="text-sm font-medium">
+                    {t("about.whoWeAre.smartEngineering.title")}
+                  </h3>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  Our team combines technical expertise with product thinking to
-                  build scalable and sustainable solutions.
+                  {t("about.whoWeAre.smartEngineering.description")}
                 </p>
               </div>
             </div>

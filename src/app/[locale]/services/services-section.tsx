@@ -15,8 +15,10 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { BorderBeam } from "@/components/ui/border-beam";
+import { useTranslations } from "next-intl";
 
 export default function ServicesSection() {
+  const t = useTranslations();
   type ImageKey = "item-1" | "item-2" | "item-3" | "item-4";
   const [activeItem, setActiveItem] = useState<ImageKey>("item-1");
 
@@ -44,12 +46,9 @@ export default function ServicesSection() {
       <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16 lg:space-y-20 dark:[--color-border:color-mix(in_oklab,var(--color-white)_10%,transparent)]">
         <div className="relative z-10 mx-auto max-w-2xl space-y-6 text-center">
           <h2 className="text-balance text-4xl font-semibold lg:text-6xl">
-            Engineering excellence, delivered.
+            {t("services.pageTitle")}
           </h2>
-          <p>
-            Smarty blends technical expertise and product thinking to help
-            startups and enterprises build software that scales.
-          </p>
+          <p>{t("services.pageSubtitle")}</p>
         </div>
 
         <div className="grid gap-12 sm:px-12 md:grid-cols-2 lg:gap-20 lg:px-0">
@@ -63,48 +62,44 @@ export default function ServicesSection() {
               <AccordionTrigger>
                 <div className="flex items-center gap-2 text-base">
                   <Database className="size-4" />
-                  Custom Software Development
+                  {t("services.customSoftware.title")}
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                From MVPs to enterprise-grade platforms — we build tailored
-                solutions that match your business goals.
+                {t("services.customSoftware.description")}
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
               <AccordionTrigger>
                 <div className="flex items-center gap-2 text-base">
                   <Fingerprint className="size-4" />
-                  Scalable Architecture & DevOps
+                  {t("services.architecture.title")}
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                We architect maintainable and scalable systems using modern
-                cloud infrastructure and CI/CD pipelines.
+                {t("services.architecture.description")}
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
               <AccordionTrigger>
                 <div className="flex items-center gap-2 text-base">
                   <IdCard className="size-4" />
-                  UI/UX Design & Frontend Development
+                  {t("services.frontend.title")}
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                Our design and frontend teams turn ideas into intuitive,
-                high-performance user interfaces.
+                {t("services.frontend.description")}
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
               <AccordionTrigger>
                 <div className="flex items-center gap-2 text-base">
                   <ChartBarIncreasingIcon className="size-4" />
-                  Mobile & Cross-Platform Apps
+                  {t("services.mobile.title")}
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                Using React Native and modern frameworks, we develop performant
-                apps that run seamlessly on every device.
+                {t("services.mobile.description")}
               </AccordionContent>
             </AccordionItem>
           </Accordion>

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { TextEffect } from "@/components/ui/text-effect";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import CustomersSection from "../app/[locale]/customers/customers-section";
+import { getTranslations } from "next-intl/server";
 
 const transitionVariants = {
   item: {
@@ -25,7 +26,9 @@ const transitionVariants = {
   },
 };
 
-export default function HeroSection() {
+export default async function HeroSection() {
+  const t = await getTranslations();
+
   return (
     <>
       <main className="overflow-hidden">
@@ -62,7 +65,7 @@ export default function HeroSection() {
                   as="h1"
                   className="mt-8 text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem]"
                 >
-                  We Turn Code into Business Value
+                  {t("hero.title")}
                 </TextEffect>
                 <TextEffect
                   per="line"
@@ -72,8 +75,7 @@ export default function HeroSection() {
                   as="p"
                   className="mx-auto mt-8 max-w-2xl text-balance text-lg"
                 >
-                  From product strategy to scalable solutions — we help you
-                  build software that delivers real impact.
+                  {t("hero.subtitle")}
                 </TextEffect>
 
                 <AnimatedGroup
@@ -100,7 +102,7 @@ export default function HeroSection() {
                       className="rounded-xl px-5 text-base"
                     >
                       <Link href="/estimate-project">
-                        <span className="text-nowrap">Start Building</span>
+                        <span className="text-nowrap">{t("hero.cta")}</span>
                       </Link>
                     </Button>
                   </div>

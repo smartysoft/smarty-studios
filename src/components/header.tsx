@@ -5,15 +5,26 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { cn } from "@/lib/utils";
+import LanguageSelector from "@/components/language-selector";
 
 const menuItems = [
-  { name: "Services", href: "/services" },
-  // { name: "Projects", href: "/projects" },
-  { name: "Customers", href: "/customers" },
-  { name: "About", href: "/about" },
+  { name: "services", href: "/services" },
+  { name: "customers", href: "/customers" },
+  { name: "about", href: "/about" },
 ];
 
-export const HeroHeader = () => {
+interface HeaderProps {
+  translations: {
+    navbar: {
+      [key: string]: string;
+    };
+    estimateProject: {
+      cta: string;
+    };
+  };
+}
+
+export const HeroHeader = ({ translations }: HeaderProps) => {
   const [menuState, setMenuState] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
 
@@ -24,6 +35,7 @@ export const HeroHeader = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <header>
       <nav
@@ -47,14 +59,17 @@ export const HeroHeader = () => {
                 <Logo />
               </Link>
 
-              <button
-                onClick={() => setMenuState(!menuState)}
-                aria-label={menuState == true ? "Close Menu" : "Open Menu"}
-                className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
-              >
-                <Menu className="in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
-                <X className="in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
-              </button>
+              <div className="flex items-center gap-2 lg:hidden">
+                <LanguageSelector />
+                <button
+                  onClick={() => setMenuState(!menuState)}
+                  aria-label={menuState == true ? "Close Menu" : "Open Menu"}
+                  className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5"
+                >
+                  <Menu className="in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
+                  <X className="in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
+                </button>
+              </div>
             </div>
 
             <div className="absolute inset-0 m-auto hidden size-fit lg:block">
@@ -65,7 +80,7 @@ export const HeroHeader = () => {
                       href={item.href}
                       className="text-muted-foreground hover:text-accent-foreground block duration-150"
                     >
-                      <span>{item.name}</span>
+                      <span>{translations.navbar[item.name]}</span>
                     </Link>
                   </li>
                 ))}
@@ -81,16 +96,19 @@ export const HeroHeader = () => {
                         href={item.href}
                         className="text-muted-foreground hover:text-accent-foreground block duration-150"
                       >
-                        <span>{item.name}</span>
+                        <span>{translations.navbar[item.name]}</span>
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
+              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:items-center">
+                <div className="hidden lg:block">
+                  <LanguageSelector />
+                </div>
                 <Button asChild size="sm">
                   <Link href="/estimate-project">
-                    <span>Estimate Project</span>
+                    <span>{translations.estimateProject.cta}</span>
                   </Link>
                 </Button>
               </div>
@@ -98,15 +116,6 @@ export const HeroHeader = () => {
           </div>
         </div>
       </nav>
-
-      {/* <div
-        aria-hidden
-        className="absolute inset-0 isolate hidden opacity-65 contain-strict lg:block -z-10"
-      >
-        <div className="w-140 h-320 -translate-y-87.5 absolute left-0 top-0 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,85%,.08)_0,hsla(0,0%,55%,.02)_50%,hsla(0,0%,45%,0)_80%)]" />
-        <div className="h-320 absolute left-0 top-0 w-60 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]" />
-        <div className="h-320 -translate-y-87.5 absolute left-0 top-0 w-60 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
-      </div> */}
     </header>
   );
 };

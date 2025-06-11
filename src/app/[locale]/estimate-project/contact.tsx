@@ -2,8 +2,11 @@
 
 import { Card } from "@/components/ui/card";
 import { useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 export default function ContactSection() {
+  const t = useTranslations();
+
   useEffect(() => {
     const widgetScriptSrc = "https://tally.so/widgets/embed.js";
 
@@ -51,14 +54,12 @@ export default function ContactSection() {
     <section className="py-32">
       <div className="mx-auto max-w-3xl px-8 lg:px-0">
         <h1 className="text-center text-4xl font-semibold lg:text-5xl">
-          You need a partner.
+          {t("estimateProject.contactTitle")}
           <br />
-          We&apos;re here to help.
+          {t("estimateProject.contactSubtitle")}
         </h1>
         <p className="mt-4 text-center">
-          Before we start, we would like to better understand your needs.
-          We&apos;ll review your application and schedule a free estimation
-          call.
+          {t("estimateProject.contactDescription")}
         </p>
 
         <Card className="mx-auto mt-12 max-w-lg p-8 shadow-md sm:p-8">
