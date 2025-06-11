@@ -323,7 +323,7 @@ export default async function RootLayout({
         </NextIntlClientProvider>
         <Analytics />
         <SpeedInsights />
-        <GoogleAnalytics gaId="G-JVTNYRYWQT" />
+        <GoogleAnalytics gaId="G-4753ZHETCZ" />
         <GoogleTagManager gtmId="GTM-MDQD8KRG" />
       </body>
     </html>
