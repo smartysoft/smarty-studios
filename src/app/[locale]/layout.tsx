@@ -324,6 +324,7 @@ export default async function RootLayout({
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics gaId="G-JVTNYRYWQT" />
+        <GoogleTagManager gtmId="GTM-MDQD8KRG" />
       </body>
     </html>
   );
