@@ -9,7 +9,7 @@ import { notFound } from "next/navigation";
 import { getTranslations, getMessages } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 // Font configurations
 const interSans = Inter({
@@ -209,7 +209,7 @@ const createStructuredData = (locale: string, companyName: string) => ({
       ? ["Smarty Studios", "Smart Yazılım", "Smarty Yazılım"]
       : ["Smarty Studios", "Smart Yazılım"],
   url: COMPANY_INFO_BASE.url,
-  logo: `${COMPANY_INFO_BASE.url}/logo.png`,
+  logo: `${COMPANY_INFO_BASE.url}/minilogo.png`,
   description:
     locale === "tr"
       ? "Profesyonel yazılım geliştirme, danışmanlık, mobil ve web geliştirme hizmetleri. İşiniz için uzman çözümler."
@@ -288,14 +288,6 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <head>
-        <script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="a4eaeb4f-ba1c-497e-bc97-61c943eb3bdc"
-          type="text/javascript"
-          async
-        ></script>
-
         {/* Analytics Script */}
         <Script
           defer
@@ -324,7 +316,6 @@ export default async function RootLayout({
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics gaId="G-4753ZHETCZ" />
-        <GoogleTagManager gtmId="GTM-MDQD8KRG" />
       </body>
     </html>
   );

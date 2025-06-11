@@ -91,7 +91,7 @@ export const HeroHeader = ({ translations }: HeaderProps) => {
               <div className="lg:hidden">
                 <ul className="space-y-6 text-base">
                   {menuItems.map((item, index) => (
-                    <li key={index}>
+                    <li key={index} onClick={() => setMenuState(false)}>
                       <Link
                         href={item.href}
                         className="text-muted-foreground hover:text-accent-foreground block duration-150"
@@ -107,7 +107,10 @@ export const HeroHeader = ({ translations }: HeaderProps) => {
                   <LanguageSelector />
                 </div>
                 <Button asChild size="sm">
-                  <Link href="/estimate-project">
+                  <Link
+                    href="/estimate-project"
+                    onClick={() => setMenuState(false)}
+                  >
                     <span>{translations.estimateProject.cta}</span>
                   </Link>
                 </Button>

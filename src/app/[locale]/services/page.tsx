@@ -82,5 +82,9 @@ export async function generateMetadata({
 }
 
 export default function Services() {
-  return <ServicesSection />;
+  return (
+    <div>
+      <ServicesSection />;
+    </div>
+  );
 }

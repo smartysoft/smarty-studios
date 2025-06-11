@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/select";
 import { useRouter, usePathname } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
-import { Globe } from "lucide-react";
 
 const languages = [
   { code: "en", name: "English", flag: "🇺🇸" },
@@ -29,25 +28,19 @@ export default function LanguageSelector() {
 
   return (
     <Select value={locale} onValueChange={handleLanguageChange}>
-      <SelectTrigger className="w-[120px] h-8 bg-transparent border-none shadow-none focus:ring-0">
-        <div className="flex items-center gap-2">
-          <Globe className="h-4 w-4" />
+      <SelectTrigger className="w-[50px] h-8 bg-transparent border-0 shadow-none focus:ring-0 focus:outline-none p-0 flex items-center justify-center">
+        <div className="flex items-center">
           <SelectValue>
-            <span className="flex items-center gap-1">
-              <span>{currentLanguage?.flag}</span>
-              <span className="hidden sm:inline">{currentLanguage?.name}</span>
-              <span className="sm:hidden">
-                {currentLanguage?.code.toUpperCase()}
-              </span>
-            </span>
+            <span className="text-xl">{currentLanguage?.flag}</span>
           </SelectValue>
         </div>
       </SelectTrigger>
+
       <SelectContent>
         {languages.map((language) => (
           <SelectItem key={language.code} value={language.code}>
             <div className="flex items-center gap-2">
-              <span>{language.flag}</span>
+              <span className="text-xl">{language.flag}</span>
               <span>{language.name}</span>
             </div>
           </SelectItem>

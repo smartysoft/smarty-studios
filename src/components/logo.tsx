@@ -5,10 +5,11 @@ export const Logo = ({ className }: { className?: string }) => {
   return (
     <Image
       src="/logo.png"
-      width={150}
-      height={60}
-      className={className}
+      className={`${className} w-full h-auto`}
+      width={120}
+      height={42}
       alt="logo"
+      priority={true}
     />
   );
 };
