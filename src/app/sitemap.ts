@@ -42,6 +42,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.9,
     },
+    // Yeni eklenen sayfalar
+    {
+      url: `${baseUrl}/en/how-to-downgrade-ios-26-to-stock`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/tr/ios-26-stock-sistemine-nasil-donulur`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
   ];
 
   // Gelecekte dinamik sayfalar eklenebilir
