@@ -30,11 +30,13 @@ export default function LanguageSelector() {
     <Select value={locale} onValueChange={handleLanguageChange} name="language">
       <SelectTrigger
         name="language-trigger"
+        aria-label={currentLanguage?.name || "Select language"}
         className="w-[50px] h-8 bg-transparent border-0 shadow-none focus:ring-0 focus:outline-none p-0 flex items-center justify-center"
       >
         <div className="flex items-center">
           <SelectValue>
             <span className="text-xl">{currentLanguage?.flag}</span>
+            <span className="sr-only">{currentLanguage?.name}</span>
           </SelectValue>
         </div>
       </SelectTrigger>
