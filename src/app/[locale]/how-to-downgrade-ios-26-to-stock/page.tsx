@@ -1,67 +1,79 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 
-export async function generateMetadata({
-  params: { locale },
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
-  const isEnglish = locale === "en";
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const resolvedParams = await params;
+  const isEnglish = resolvedParams.locale === "en";
+  const title = isEnglish
+    ? "How to Downgrade iOS 26 to Stock - Complete Step by Step Guide 2024"
+    : "iOS 26'dan Stock Sisteme Nasıl Dönülür - 2024 Detaylı Adım Adım Rehber";
+  const description = isEnglish
+    ? "Learn how to safely downgrade your iOS 26 device to stock firmware. Complete step-by-step guide with detailed instructions, precautions, and troubleshooting tips. Updated for 2024."
+    : "iOS 26 cihazınızı stock firmware'e güvenli bir şekilde nasıl düşüreceğinizi öğrenin. Detaylı talimatlar, önlemler ve sorun giderme ipuçlarıyla adım adım rehber. 2024 güncellemesi.";
 
   return {
-    title: isEnglish
-      ? "How to Downgrade iOS 26 to Stock - Step by Step Guide"
-      : "iOS 26'dan Stock Sisteme Nasıl Dönülür - Adım Adım Rehber",
-    description: isEnglish
-      ? "Learn how to safely downgrade your iOS 26 device to stock firmware. Complete step-by-step guide with detailed instructions and precautions."
-      : "iOS 26 cihazınızı stock firmware'e güvenli bir şekilde nasıl düşüreceğinizi öğrenin. Detaylı talimatlar ve önlemlerle adım adım rehber.",
+    title,
+    description,
     keywords: isEnglish
-      ? "iOS 26 downgrade, stock iOS, iOS downgrade guide, iPhone firmware, iOS restore, iOS downgrade tutorial, iPhone system restore, iOS firmware downgrade"
-      : "iOS 26 düşürme, stock iOS, iOS düşürme rehberi, iPhone firmware, iOS geri yükleme, iOS düşürme eğitimi, iPhone sistem geri yükleme, iOS firmware düşürme",
+      ? "iOS 26 downgrade, stock iOS, iOS downgrade guide, iPhone firmware, iOS restore, iOS downgrade tutorial, iPhone system restore, iOS firmware downgrade, how to downgrade iOS, iOS 26 to stock, iOS downgrade steps, iOS restore guide, iPhone firmware restore, iOS system restore, iOS downgrade 2024"
+      : "iOS 26 düşürme, stock iOS, iOS düşürme rehberi, iPhone firmware, iOS geri yükleme, iOS düşürme eğitimi, iPhone sistem geri yükleme, iOS firmware düşürme, iOS nasıl düşürülür, iOS 26 stock sistem, iOS düşürme adımları, iOS geri yükleme rehberi, iPhone firmware geri yükleme, iOS sistem geri yükleme, iOS düşürme 2024",
     alternates: {
-      canonical: `https://smarty-studios.com/${locale}/how-to-downgrade-ios-26-to-stock`,
+      canonical: `https://smarty-studios.com/${resolvedParams.locale}/how-to-downgrade-ios-26-to-stock`,
       languages: {
         en: "/en/how-to-downgrade-ios-26-to-stock",
         tr: "/tr/ios-26-stock-sistemine-nasil-donulur",
       },
     },
     openGraph: {
-      title: isEnglish
-        ? "How to Downgrade iOS 26 to Stock - Step by Step Guide"
-        : "iOS 26'dan Stock Sisteme Nasıl Dönülür - Adım Adım Rehber",
-      description: isEnglish
-        ? "Learn how to safely downgrade your iOS 26 device to stock firmware. Complete step-by-step guide with detailed instructions and precautions."
-        : "iOS 26 cihazınızı stock firmware'e güvenli bir şekilde nasıl düşüreceğinizi öğrenin. Detaylı talimatlar ve önlemlerle adım adım rehber.",
+      title,
+      description,
       type: "article",
-      url: `https://smarty-studios.com/${locale}/how-to-downgrade-ios-26-to-stock`,
+      url: `https://smarty-studios.com/${resolvedParams.locale}/how-to-downgrade-ios-26-to-stock`,
       images: [
         {
           url: "https://smarty-studios.com/images/ios-downgrade-guide.jpg",
           width: 1200,
           height: 630,
-          alt: isEnglish ? "iOS Downgrade Guide" : "iOS Düşürme Rehberi",
+          alt: isEnglish
+            ? "iOS 26 Downgrade Guide - Step by Step Tutorial"
+            : "iOS 26 Düşürme Rehberi - Adım Adım Eğitim",
         },
       ],
+      siteName: "Smarty Studios",
+      locale: resolvedParams.locale,
     },
     twitter: {
       card: "summary_large_image",
-      title: isEnglish
-        ? "How to Downgrade iOS 26 to Stock - Step by Step Guide"
-        : "iOS 26'dan Stock Sisteme Nasıl Dönülür - Adım Adım Rehber",
-      description: isEnglish
-        ? "Learn how to safely downgrade your iOS 26 device to stock firmware. Complete step-by-step guide with detailed instructions and precautions."
-        : "iOS 26 cihazınızı stock firmware'e güvenli bir şekilde nasıl düşüreceğinizi öğrenin. Detaylı talimatlar ve önlemlerle adım adım rehber.",
+      title,
+      description,
       images: ["https://smarty-studios.com/images/ios-downgrade-guide.jpg"],
+      creator: "@smartystudios",
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    verification: {
+      google: "your-google-site-verification",
     },
   };
 }
 
-export default async function HowToDowngradeIOS26Page({
-  params: { locale },
-}: {
-  params: { locale: string };
-}) {
-  const isEnglish = locale === "en";
+export default async function HowToDowngradeIOS26Page({ params }: Props) {
+  const resolvedParams = await params;
+  const isEnglish = resolvedParams.locale === "en";
 
   const content = {
     title: isEnglish
@@ -181,98 +193,237 @@ export default async function HowToDowngradeIOS26Page({
   };
 
   return (
-    <article className="container mx-auto px-4 py-8 max-w-4xl pt-24">
-      <h1 className="text-4xl font-bold mb-6">{content.title}</h1>
+    <>
+      <Script
+        id="how-to-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: content.title,
+            description: content.intro,
+            step: content.steps.items.map((item, index) => ({
+              "@type": "HowToStep",
+              position: index + 1,
+              name: item.title,
+              text: item.description,
+            })),
+            totalTime: "PT30M",
+            estimatedCost: {
+              "@type": "MonetaryAmount",
+              currency: "USD",
+              value: "0",
+            },
+            supply: content.prerequisites.items.map((item) => ({
+              "@type": "HowToSupply",
+              name: item,
+            })),
+            tool: [
+              {
+                "@type": "HowToTool",
+                name: "Computer with iTunes/Finder",
+              },
+              {
+                "@type": "HowToTool",
+                name: "USB Cable",
+              },
+            ],
+          }),
+        }}
+      />
 
-      <div className="prose prose-lg max-w-none">
-        <p className="lead mb-8">{content.intro}</p>
+      <article className="container mx-auto px-4 py-8 max-w-4xl pt-24">
+        <header className="mb-8">
+          <h1 className="text-4xl font-bold mb-4">{content.title}</h1>
+          <div className="flex items-center text-gray-600 mb-4">
+            <time dateTime="2024-03-20" className="mr-4">
+              {isEnglish
+                ? "Last Updated: March 20, 2024"
+                : "Son Güncelleme: 20 Mart 2024"}
+            </time>
+            <span className="mr-4">•</span>
+            <span>
+              {isEnglish ? "Reading Time: 10 min" : "Okuma Süresi: 10 dk"}
+            </span>
+          </div>
+          <p className="text-lg text-gray-700">{content.intro}</p>
+        </header>
 
-        {/* Reklam Banner - Üst */}
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
-          <h3 className="text-xl font-semibold text-blue-800 mb-2">
-            {content.ad.title}
-          </h3>
-          <p className="text-blue-700 mb-4">{content.ad.description}</p>
-          <Link
-            href="/estimate-project"
-            className="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
-          >
-            {content.ad.cta}
-          </Link>
-        </div>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">
-            {content.prerequisites.title}
-          </h2>
-          <ul className="list-disc pl-6">
-            {content.prerequisites.items.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">{content.steps.title}</h2>
-          <ol className="list-decimal pl-6">
-            {content.steps.items.map((item, index) => (
-              <li key={index} className="mb-4">
-                <strong>{item.title}</strong>
-                <p>{item.description}</p>
+        <div className="prose prose-lg max-w-none">
+          {/* Table of Contents */}
+          <nav className="bg-gray-50 p-4 rounded-lg mb-8">
+            <h2 className="text-xl font-semibold mb-4">
+              {isEnglish ? "Table of Contents" : "İçindekiler"}
+            </h2>
+            <ul className="list-decimal pl-6">
+              <li>
+                <a
+                  href="#prerequisites"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  {content.prerequisites.title}
+                </a>
               </li>
-            ))}
-          </ol>
-        </section>
+              <li>
+                <a href="#steps" className="text-blue-600 hover:text-blue-800">
+                  {content.steps.title}
+                </a>
+              </li>
+              <li>
+                <a href="#notes" className="text-blue-600 hover:text-blue-800">
+                  {content.notes.title}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#troubleshooting"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  {content.troubleshooting.title}
+                </a>
+              </li>
+            </ul>
+          </nav>
 
-        {/* Reklam Banner - Orta */}
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 my-8">
-          <h3 className="text-xl font-semibold text-blue-800 mb-2">
-            {content.ad.title}
-          </h3>
-          <p className="text-blue-700 mb-4">{content.ad.description}</p>
-          <Link
-            href="/estimate-project"
-            className="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
-          >
-            {content.ad.cta}
-          </Link>
+          {/* Reklam Banner - Üst */}
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+            <h3 className="text-xl font-semibold text-blue-800 mb-2">
+              {content.ad.title}
+            </h3>
+            <p className="text-blue-700 mb-4">{content.ad.description}</p>
+            <Link
+              href="/estimate-project"
+              className="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
+            >
+              {content.ad.cta}
+            </Link>
+          </div>
+
+          <section id="prerequisites" className="mb-8 scroll-mt-24">
+            <h2 className="text-2xl font-semibold mb-4">
+              {content.prerequisites.title}
+            </h2>
+            <ul className="list-disc pl-6">
+              {content.prerequisites.items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section id="steps" className="mb-8 scroll-mt-24">
+            <h2 className="text-2xl font-semibold mb-4">
+              {content.steps.title}
+            </h2>
+            <ol className="list-decimal pl-6">
+              {content.steps.items.map((item, index) => (
+                <li key={index} className="mb-4">
+                  <strong>{item.title}</strong>
+                  <p>{item.description}</p>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          {/* Reklam Banner - Orta */}
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 my-8">
+            <h3 className="text-xl font-semibold text-blue-800 mb-2">
+              {content.ad.title}
+            </h3>
+            <p className="text-blue-700 mb-4">{content.ad.description}</p>
+            <Link
+              href="/estimate-project"
+              className="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
+            >
+              {content.ad.cta}
+            </Link>
+          </div>
+
+          <section id="notes" className="mb-8 scroll-mt-24">
+            <h2 className="text-2xl font-semibold mb-4">
+              {content.notes.title}
+            </h2>
+            <ul className="list-disc pl-6">
+              {content.notes.items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section id="troubleshooting" className="mb-8 scroll-mt-24">
+            <h2 className="text-2xl font-semibold mb-4">
+              {content.troubleshooting.title}
+            </h2>
+            <p>{content.troubleshooting.intro}</p>
+            <ul className="list-disc pl-6">
+              {content.troubleshooting.items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </section>
+
+          {/* Reklam Banner - Alt */}
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">
+            <h3 className="text-xl font-semibold text-blue-800 mb-2">
+              {content.ad.title}
+            </h3>
+            <p className="text-blue-700 mb-4">{content.ad.description}</p>
+            <Link
+              href="/estimate-project"
+              className="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
+            >
+              {content.ad.cta}
+            </Link>
+          </div>
+
+          {/* FAQ Section */}
+          <section className="mt-12">
+            <h2 className="text-2xl font-semibold mb-6">
+              {isEnglish
+                ? "Frequently Asked Questions"
+                : "Sıkça Sorulan Sorular"}
+            </h2>
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-lg font-medium mb-2">
+                  {isEnglish
+                    ? "Is it safe to downgrade iOS?"
+                    : "iOS düşürmek güvenli mi?"}
+                </h3>
+                <p className="text-gray-700">
+                  {isEnglish
+                    ? "Yes, it's safe as long as you follow the steps carefully and have a complete backup of your data."
+                    : "Evet, adımları dikkatli bir şekilde takip ettiğiniz ve verilerinizin tam bir yedeğini aldığınız sürece güvenlidir."}
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium mb-2">
+                  {isEnglish
+                    ? "Will I lose my data during the downgrade?"
+                    : "Düşürme sırasında verilerimi kaybeder miyim?"}
+                </h3>
+                <p className="text-gray-700">
+                  {isEnglish
+                    ? "Yes, downgrading will erase all data on your device. That's why it's crucial to create a backup first."
+                    : "Evet, düşürme işlemi cihazınızdaki tüm verileri silecektir. Bu yüzden önce yedek almanız çok önemlidir."}
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium mb-2">
+                  {isEnglish
+                    ? "How long does the downgrade process take?"
+                    : "Düşürme işlemi ne kadar sürer?"}
+                </h3>
+                <p className="text-gray-700">
+                  {isEnglish
+                    ? "The process typically takes 30-45 minutes, depending on your device model and internet connection speed."
+                    : "İşlem genellikle 30-45 dakika sürer, bu süre cihaz modelinize ve internet bağlantı hızınıza bağlı olarak değişebilir."}
+                </p>
+              </div>
+            </div>
+          </section>
         </div>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">{content.notes.title}</h2>
-          <ul className="list-disc pl-6">
-            {content.notes.items.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">
-            {content.troubleshooting.title}
-          </h2>
-          <p>{content.troubleshooting.intro}</p>
-          <ul className="list-disc pl-6">
-            {content.troubleshooting.items.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </section>
-
-        {/* Reklam Banner - Alt */}
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">
-          <h3 className="text-xl font-semibold text-blue-800 mb-2">
-            {content.ad.title}
-          </h3>
-          <p className="text-blue-700 mb-4">{content.ad.description}</p>
-          <Link
-            href="/estimate-project"
-            className="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
-          >
-            {content.ad.cta}
-          </Link>
-        </div>
-      </div>
-    </article>
+      </article>
+    </>
   );
 }
