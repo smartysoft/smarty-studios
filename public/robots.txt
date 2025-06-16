@@ -8,6 +8,8 @@ Sitemap: https://smartystudios.com/sitemap.xml
 Disallow: /admin/
 Disallow: /_next/
 Disallow: /api/
+Disallow: /404
+Disallow: /not-found
 
 # Allow crawling of important pages
 Allow: /about

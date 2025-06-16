@@ -80,5 +80,10 @@
   "contact": {
     "title": "Bize Ulaşın",
     "subtitle": "Projenizi konuşmak için sabırsızlanıyoruz. Hemen iletişime geçin, size en uygun çözümü birlikte bulalım."
+  },
+  "notFound": {
+    "title": "404 - Sayfa Bulunamadı",
+    "description": "Üzgünüz, aradığınız sayfayı bulamadık.",
+    "backToHome": "Ana Sayfaya Dön"
   }
 }
