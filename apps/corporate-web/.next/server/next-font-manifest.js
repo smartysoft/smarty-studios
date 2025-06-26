@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/ozanmanav/projects/smarty-studios/apps/corporate-web/src/app/[locale]/layout":["static/media/e4af272ccee01ff0-s.p.woff2","static/media/103fc5fac08dcb15-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';

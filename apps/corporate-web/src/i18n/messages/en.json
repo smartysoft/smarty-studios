@@ -1,0 +1,88 @@
+{
+  "company": {
+    "name": "Smarty Software Studios"
+  },
+  "hero": {
+    "title": "We Turn Code into Business Value",
+    "subtitle": "From product strategy to scalable solutions — we help you build software that delivers real impact.",
+    "cta": "Start Building"
+  },
+  "customers": {
+    "title": "Our Customers",
+    "subtitle": "Meet our satisfied customers and see how we help businesses succeed with quality software development solutions.",
+    "meetOurCustomers": "Meet Our Customers",
+    "pageTitle": "Customers",
+    "pageSubtitle": "We work with a wide range of customers, from startups to enterprises."
+  },
+  "footer": {
+    "subtitle": "Professional software development, consulting, mobile and web development services.",
+    "copyright": "© 2025 {companyName}. All rights reserved."
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "customers": "Customers"
+  },
+  "estimateProject": {
+    "title": "Estimate Your Project",
+    "subtitle": "Tell us about your project and we'll get back to you with a free estimate.",
+    "cta": "Estimate Now",
+    "contactTitle": "You need a partner.",
+    "contactSubtitle": "We're here to help.",
+    "contactDescription": "Before we start, we would like to better understand your needs. We'll review your application and schedule a free estimation call."
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "We are a software development company that helps businesses succeed with quality software development solutions.",
+    "pageTitle": "About Us",
+    "pageSubtitle": "We don't just write code — we build reliable, scalable, and smart digital solutions.",
+    "whoWeAre": {
+      "title": "Who We Are",
+      "description1": "Smarty is a software development and consulting company helping",
+      "description1Highlight": "fast-growing startups and enterprises",
+      "description1Continue": "turn ideas into fully functional digital products. With a team of experienced engineers and product thinkers, we deliver frontend and backend solutions that scale — both technically and commercially.",
+      "description2": "Founded by engineers, built for business impact.",
+      "reliableDelivery": {
+        "title": "Reliable Delivery",
+        "description": "We deliver projects on time, with clean code and clear communication — every single time."
+      },
+      "smartEngineering": {
+        "title": "Smart Engineering",
+        "description": "Our team combines technical expertise with product thinking to build scalable and sustainable solutions."
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We offer a wide range of software development services to help businesses succeed with quality software development solutions.",
+    "pageTitle": "Engineering excellence, delivered.",
+    "pageSubtitle": "Smarty blends technical expertise and product thinking to help startups and enterprises build software that scales.",
+    "customSoftware": {
+      "title": "Custom Software Development",
+      "description": "From MVPs to enterprise-grade platforms — we build tailored solutions that match your business goals."
+    },
+    "architecture": {
+      "title": "Scalable Architecture & DevOps",
+      "description": "We architect maintainable and scalable systems using modern cloud infrastructure and CI/CD pipelines."
+    },
+    "frontend": {
+      "title": "UI/UX Design & Frontend Development",
+      "description": "Our design and frontend teams turn ideas into intuitive, high-performance user interfaces."
+    },
+    "mobile": {
+      "title": "Mobile & Cross-Platform Apps",
+      "description": "Using React Native and modern frameworks, we develop performant apps that run seamlessly on every device."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help you with your software development needs. Contact us today to get started."
+  },
+  "notFound": {
+    "title": "404 - Page Not Found",
+    "description": "Sorry, we couldn't find the page you're looking for.",
+    "backToHome": "Back to Home"
+  }
+}

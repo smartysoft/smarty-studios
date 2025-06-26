@@ -1,0 +1,13 @@
+{
+  "/favicon.ico/route": "/favicon.ico",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/_not-found/page": "/_not-found",
+  "/[locale]/[...notFound]/page": "/[locale]/[...notFound]",
+  "/[locale]/about/page": "/[locale]/about",
+  "/[locale]/customers/page": "/[locale]/customers",
+  "/[locale]/estimate-project/page": "/[locale]/estimate-project",
+  "/[locale]/how-to-downgrade-ios-26-to-stock/page": "/[locale]/how-to-downgrade-ios-26-to-stock",
+  "/[locale]/page": "/[locale]",
+  "/[locale]/services/page": "/[locale]/services",
+  "/[locale]/projects/page": "/[locale]/projects"
+}

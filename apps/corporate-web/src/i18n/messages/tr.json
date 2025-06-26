@@ -1,0 +1,89 @@
+{
+  "company": {
+    "name": "Smarty Yazılım Hizmetleri"
+  },
+  "hero": {
+    "title": "Yazılımı İş Başarısına Dönüştürüyoruz",
+    "subtitle": "Fikir aşamasından ölçeklenebilir çözümlere — işinize gerçek değer katan yazılımlar geliştiriyoruz.",
+    "cta": "Projeye Başla"
+  },
+  "customers": {
+    "title": "Referanslarımız",
+    "subtitle": "Başarı hikayelerimizi ve müşterilerimizin deneyimlerini keşfedin. Her projede fark yaratan çözümler sunuyoruz.",
+    "meetOurCustomers": "Referanslarımızı Görün",
+    "pageTitle": "Referanslarımız",
+    "pageSubtitle": "Startup'lardan kurumlara kadar geniş bir müşteri yelpazesiyle çalışıyoruz."
+  },
+  "footer": {
+    "title": "Smarty Software Studios",
+    "subtitle": "Uzman kadromuzla mobil, web ve kurumsal yazılım geliştirme hizmetleri sunuyoruz.",
+    "copyright": "© 2025 {companyName}. Tüm hakları saklıdır."
+  },
+  "navbar": {
+    "home": "Ana Sayfa",
+    "about": "Biz Kimiz",
+    "services": "Çözümlerimiz",
+    "contact": "Bize Ulaşın",
+    "customers": "Referanslar"
+  },
+  "estimateProject": {
+    "title": "Projenizi Konuşalım",
+    "subtitle": "Hayalinizdeki projeyi birlikte hayata geçirelim. Size özel fiyat teklifimizi hemen iletelim.",
+    "cta": "Teklif Al",
+    "contactTitle": "Bir ortağa ihtiyacınız var.",
+    "contactSubtitle": "Yardım etmek için buradayız.",
+    "contactDescription": "Başlamadan önce ihtiyaçlarınızı daha iyi anlamak istiyoruz. Başvurunuzu inceleyeceğiz ve ücretsiz bir değerlendirme görüşmesi planlayacağız."
+  },
+  "about": {
+    "title": "Biz Kimiz?",
+    "subtitle": "Yenilikçi ve sürdürülebilir yazılım çözümleriyle işletmenizi geleceğe taşıyoruz. Her projede en iyisini hedefliyoruz.",
+    "pageTitle": "Biz Kimiz?",
+    "pageSubtitle": "Sadece kod yazmıyoruz — güvenilir, ölçeklenebilir ve akıllı dijital çözümler geliştiriyoruz.",
+    "whoWeAre": {
+      "title": "Biz Kimiz?",
+      "description1": "Smarty,",
+      "description1Highlight": "hızla büyüyen startup'lar ve kurumlara",
+      "description1Continue": "fikirleri tam fonksiyonel dijital ürünlere dönüştürmelerinde yardımcı olan bir yazılım geliştirme ve danışmanlık şirketidir. Deneyimli mühendis ve ürün düşünürlerinden oluşan ekibimizle, hem teknik hem de ticari olarak ölçeklenebilen frontend ve backend çözümleri sunuyoruz.",
+      "description2": "Mühendisler tarafından kuruldu, iş etkisi için geliştirildi.",
+      "reliableDelivery": {
+        "title": "Güvenilir Teslimat",
+        "description": "Projeleri zamanında, temiz kod ve net iletişimle — her seferinde teslim ediyoruz."
+      },
+      "smartEngineering": {
+        "title": "Akıllı Mühendislik",
+        "description": "Ekibimiz teknik uzmanlığı ürün yaklaşımıyla birleştirerek ölçeklenebilir ve sürdürülebilir çözümler geliştirir."
+      }
+    }
+  },
+  "services": {
+    "title": "Çözümlerimiz",
+    "subtitle": "Modern teknolojiler ve yaratıcı yaklaşımlarla işinize değer katan yazılım çözümleri geliştiriyoruz.",
+    "pageTitle": "Mükemmellik sunuyoruz.",
+    "pageSubtitle": "Smarty, teknik uzmanlık ve ürün yaklaşımını birleştirerek startup'lara ve kurumlara ölçeklenebilir yazılımlar geliştirir.",
+    "customSoftware": {
+      "title": "Özel Yazılım Geliştirme",
+      "description": "MVP'den kurumsal platformlara — iş hedeflerinize uygun özel çözümler geliştiriyoruz."
+    },
+    "architecture": {
+      "title": "Ölçeklenebilir Mimari & DevOps",
+      "description": "Modern bulut altyapısı ve CI/CD pipeline'ları kullanarak sürdürülebilir ve ölçeklenebilir sistemler tasarlıyoruz."
+    },
+    "frontend": {
+      "title": "UI/UX Tasarım & Frontend Geliştirme",
+      "description": "Tasarım ve frontend ekibimiz fikirleri sezgisel, yüksek performanslı kullanıcı arayüzlerine dönüştürür."
+    },
+    "mobile": {
+      "title": "Mobil & Çapraz Platform Uygulamalar",
+      "description": "React Native ve modern framework'ler kullanarak her cihazda sorunsuz çalışan performanslı uygulamalar geliştiriyoruz."
+    }
+  },
+  "contact": {
+    "title": "Bize Ulaşın",
+    "subtitle": "Projenizi konuşmak için sabırsızlanıyoruz. Hemen iletişime geçin, size en uygun çözümü birlikte bulalım."
+  },
+  "notFound": {
+    "title": "404 - Sayfa Bulunamadı",
+    "description": "Üzgünüz, aradığınız sayfayı bulamadık.",
+    "backToHome": "Ana Sayfaya Dön"
+  }
+}

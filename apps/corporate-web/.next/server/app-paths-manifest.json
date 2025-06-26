@@ -1,0 +1,13 @@
+{
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/[locale]/[...notFound]/page": "app/[locale]/[...notFound]/page.js",
+  "/[locale]/about/page": "app/[locale]/about/page.js",
+  "/[locale]/customers/page": "app/[locale]/customers/page.js",
+  "/[locale]/estimate-project/page": "app/[locale]/estimate-project/page.js",
+  "/[locale]/how-to-downgrade-ios-26-to-stock/page": "app/[locale]/how-to-downgrade-ios-26-to-stock/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/services/page": "app/[locale]/services/page.js",
+  "/[locale]/projects/page": "app/[locale]/projects/page.js"
+}

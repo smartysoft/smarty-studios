@@ -1,0 +1,20 @@
+{
+  "name": "Smarty Software Studios",
+  "short_name": "Smarty Studios",
+  "description": "Professional Software Development & Consulting",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/minilogo.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "productivity", "developer"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
