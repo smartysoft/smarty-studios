@@ -38,8 +38,8 @@ export default async function CustomersSection({
                 className="mx-auto h-7 w-fit"
                 src="/axya-white.svg"
                 alt="Axya Logo"
-                height={150}
-                width={300}
+                height={28}
+                width={112}
               />
             </a>
           </div>
@@ -54,8 +54,8 @@ export default async function CustomersSection({
                 className="mx-auto h-7 w-fit"
                 src="/paynet-white.png"
                 alt="Paynet Logo"
-                height={150}
-                width={300}
+                height={28}
+                width={112}
               />
             </a>
           </div>
@@ -70,8 +70,8 @@ export default async function CustomersSection({
                 className="mx-auto h-7 w-fit"
                 src="/sdn.webp"
                 alt="SDN Logo"
-                height={150}
-                width={300}
+                height={28}
+                width={112}
               />
             </a>
           </div>
@@ -86,8 +86,8 @@ export default async function CustomersSection({
                 className="mx-auto h-7 w-fit"
                 src="/rayon.png"
                 alt="Rayon Logo"
-                height={150}
-                width={300}
+                height={28}
+                width={112}
               />
             </a>
           </div>
@@ -102,8 +102,8 @@ export default async function CustomersSection({
                 className="mx-auto h-7 w-fit"
                 src="/censys.png"
                 alt="Censys Logo"
-                height={150}
-                width={300}
+                height={28}
+                width={112}
               />
             </a>
           </div>
@@ -118,8 +118,8 @@ export default async function CustomersSection({
                 className="mx-auto h-7 w-fit"
                 src="/aily-logo.svg"
                 alt="Aily Logo"
-                height={150}
-                width={300}
+                height={28}
+                width={112}
               />
             </a>
           </div>
