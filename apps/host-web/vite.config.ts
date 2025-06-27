@@ -12,6 +12,10 @@ export default defineConfig({
           process.env.NODE_ENV === "development"
             ? "http://localhost:5001/assets/remoteEntry.js"
             : "https://remote.smartystudios.com/assets/remoteEntry.js",
+        remoteApp2:
+          process.env.NODE_ENV === "development"
+            ? "http://localhost:5003/assets/remoteEntry.js"
+            : "https://remote2.smartystudios.com/assets/remoteEntry.js",
       },
       shared: ["react", "react-dom"],
     }),
