@@ -4,6 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "turbo dev",
+    "dev:cw": "turbo dev --filter=corporate-web",
+    "dev:hw": "turbo dev --filter=host-web",
+    "dev:rw": "turbo dev --filter=remote-web",
+    "dev:rw2": "turbo dev --filter=remote2-web",
     "build": "turbo build",
     "start": "turbo start",
     "lint": "turbo lint"
