@@ -75,6 +75,10 @@
     "mobile": {
       "title": "Mobil & Çapraz Platform Uygulamalar",
       "description": "React Native ve modern framework'ler kullanarak her cihazda sorunsuz çalışan performanslı uygulamalar geliştiriyoruz."
+    },
+    "ai": {
+      "title": "AI Destekli Özellikler",
+      "description": "Chatbot'lar, akıllı arama ve gerçek zamanlı öneriler gibi AI özellikleri ekleyerek daha akıllı kullanıcı arayüzleri geliştirin."
     }
   },
   "contact": {

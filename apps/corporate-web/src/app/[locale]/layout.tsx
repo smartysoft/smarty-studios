@@ -227,6 +227,7 @@ const createStructuredData = (locale: string, companyName: string) => ({
           "Backend Geliştirme",
           "Frontend Geliştirme",
           "Özel Yazılım Çözümleri",
+          "AI Destekli Özellikler",
         ]
       : [
           "Software Development",
@@ -236,6 +237,7 @@ const createStructuredData = (locale: string, companyName: string) => ({
           "Backend Development",
           "Frontend Development",
           "Custom Software Solutions",
+          "AI-Powered Features",
         ],
   contactPoint: {
     "@type": "ContactPoint",

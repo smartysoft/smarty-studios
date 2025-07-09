@@ -37,6 +37,8 @@ export async function generateMetadata({
             "uygulama geliştirme hizmetleri",
             "web tasarım hizmetleri",
             "dijital çözümler",
+            "AI destekli özellikler",
+            "yapay zeka çözümleri",
           ]
         : [
             "software development services",
@@ -51,6 +53,8 @@ export async function generateMetadata({
             "digital solutions",
             "technology consulting",
             "software engineering",
+            "AI-powered features",
+            "artificial intelligence solutions",
           ],
     openGraph: {
       title: `${

@@ -74,6 +74,10 @@
     "mobile": {
       "title": "Mobile & Cross-Platform Apps",
       "description": "Using React Native and modern frameworks, we develop performant apps that run seamlessly on every device."
+    },
+    "ai": {
+      "title": "AI-Powered Features",
+      "description": "Build smarter UIs by adding AI features like chatbots, smart search, or real-time recommendations."
     }
   },
   "contact": {

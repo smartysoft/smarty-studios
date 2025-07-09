@@ -10,6 +10,7 @@ import {
   Database,
   Fingerprint,
   IdCard,
+  Sparkles,
 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -19,7 +20,7 @@ import { useTranslations } from "next-intl";
 
 export default function ServicesSection() {
   const t = useTranslations();
-  type ImageKey = "item-1" | "item-2" | "item-3" | "item-4";
+  type ImageKey = "item-1" | "item-2" | "item-3" | "item-4" | "item-5";
   const [activeItem, setActiveItem] = useState<ImageKey>("item-1");
 
   const images = {
@@ -38,6 +39,10 @@ export default function ServicesSection() {
     "item-4": {
       image: "/mobile.jpg",
       alt: "Mobile & Cross-Platform Apps",
+    },
+    "item-5": {
+      image: "/charts.webp",
+      alt: "AI-Powered Features",
     },
   };
 
@@ -100,6 +105,17 @@ export default function ServicesSection() {
               </AccordionTrigger>
               <AccordionContent>
                 {t("services.mobile.description")}
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-5">
+              <AccordionTrigger>
+                <div className="flex items-center gap-2 text-base">
+                  <Sparkles className="size-4" />
+                  {t("services.ai.title")}
+                </div>
+              </AccordionTrigger>
+              <AccordionContent>
+                {t("services.ai.description")}
               </AccordionContent>
             </AccordionItem>
           </Accordion>
