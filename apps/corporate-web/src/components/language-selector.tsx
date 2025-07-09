@@ -21,7 +21,7 @@ export default function LanguageSelector() {
   const pathname = usePathname();
 
   const handleLanguageChange = (newLocale: string) => {
-    router.replace(pathname, { locale: newLocale });
+    router.push(pathname, { locale: newLocale });
   };
 
   const currentLanguage = languages.find((lang) => lang.code === locale);
