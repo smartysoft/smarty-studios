@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Logo } from "./logo";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
