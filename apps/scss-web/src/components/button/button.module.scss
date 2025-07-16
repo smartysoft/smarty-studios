@@ -1,0 +1,16 @@
+@use "../../assets/styles/abstracts/mixins" as *;
+@use "../../assets/styles/abstracts/variables" as *;
+
+.primary {
+  @include button-base;
+  @include button-disabled;
+
+  background-color: var(--color-primary);
+}
+
+.secondary {
+  @include button-base;
+  @include button-disabled;
+
+  background-color: var(--color-secondary);
+}

@@ -1,0 +1,80 @@
+// Font variables (genelde abstracts/variables'tan gelir)
+:root {
+  --font-family-sans: "Inter", sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.6;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+// Global body font
+body {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text); // tema değişkeni
+  -webkit-font-smoothing: antialiased;
+}
+
+// Heading hierarchy
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin: 0 0 0.5em 0;
+}
+
+h1 {
+  font-size: 2.25rem; // 36px
+}
+h2 {
+  font-size: 1.875rem; // 30px
+}
+h3 {
+  font-size: 1.5rem; // 24px
+}
+h4 {
+  font-size: 1.25rem; // 20px
+}
+h5 {
+  font-size: 1rem; // 16px
+}
+h6 {
+  font-size: 0.875rem; // 14px
+}
+
+// Paragraphs
+p {
+  margin-bottom: 1rem;
+}
+
+// Links
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Small text
+small {
+  font-size: 0.875rem;
+}
+
+// Blockquote
+blockquote {
+  font-style: italic;
+  border-left: 4px solid var(--color-primary);
+  padding-left: 1rem;
+  color: #666;
+}

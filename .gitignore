@@ -18,3 +18,4 @@ build
 
 npm-debug.log*
 .pnpm-debug.log*
+*.module.scss.d.ts
