@@ -35,7 +35,7 @@ export default async function CustomersSection({
           <div className="flex">
             <a href="https://axya.co" target="_blank" rel="noopener noreferrer">
               <Image
-                className="mx-auto h-7 w-fit"
+                className="mx-auto h-7 w-fit text-white"
                 src="/axya-white.svg"
                 alt="Axya Logo"
                 height={28}
@@ -52,10 +52,11 @@ export default async function CustomersSection({
             >
               <Image
                 className="mx-auto h-7 w-fit"
-                src="/paynet-white.png"
+                src="/paynet-white.webp"
                 alt="Paynet Logo"
                 height={28}
                 width={112}
+                style={{ width: "auto", height: "auto" }}
               />
             </a>
           </div>
@@ -72,6 +73,7 @@ export default async function CustomersSection({
                 alt="SDN Logo"
                 height={28}
                 width={112}
+                style={{ width: "auto", height: "auto" }}
               />
             </a>
           </div>
@@ -84,10 +86,11 @@ export default async function CustomersSection({
             >
               <Image
                 className="mx-auto h-7 w-fit"
-                src="/rayon.png"
+                src="/rayon.webp"
                 alt="Rayon Logo"
                 height={28}
                 width={112}
+                style={{ width: "auto", height: "auto" }}
               />
             </a>
           </div>
@@ -100,10 +103,11 @@ export default async function CustomersSection({
             >
               <Image
                 className="mx-auto h-7 w-fit"
-                src="/censys.png"
+                src="/censys.webp"
                 alt="Censys Logo"
                 height={28}
                 width={112}
+                style={{ width: "auto", height: "auto" }}
               />
             </a>
           </div>
@@ -115,7 +119,7 @@ export default async function CustomersSection({
               rel="noopener noreferrer"
             >
               <Image
-                className="mx-auto h-7 w-fit"
+                className="mx-auto h-7 w-fit text-white"
                 src="/aily-logo.svg"
                 alt="Aily Logo"
                 height={28}

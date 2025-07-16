@@ -4,24 +4,13 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
-  const { locale } = params;
-  const t = await getTranslations({ locale });
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations();
   const companyName = t("company.name");
 
   return {
-    title:
-      locale === "tr"
-        ? `404 - Sayfa Bulunamadı | ${companyName}`
-        : `404 - Page Not Found | ${companyName}`,
-    description:
-      locale === "tr"
-        ? "Aradığınız sayfa bulunamadı. Ana sayfaya dönmek veya diğer hizmetlerimizi keşfetmek için tıklayın."
-        : "The page you are looking for could not be found. Click to return to the homepage or explore our other services.",
+    title: `${t("notFound.title")} | ${companyName}`,
+    description: t("notFound.description"),
     robots: {
       index: false,
       follow: true,

@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://smarty-studios.com/${resolvedParams.locale}/how-to-downgrade-ios-26-to-stock`,
       images: [
         {
-          url: "https://smarty-studios.com/images/ios-downgrade-guide.jpg",
+          url: "https://smarty-studios.com/images/ios-downgrade-guide.webp",
           width: 1200,
           height: 630,
           alt: isEnglish
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
-      images: ["https://smarty-studios.com/images/ios-downgrade-guide.jpg"],
+      images: ["https://smarty-studios.com/images/ios-downgrade-guide.webp"],
       creator: "@smartystudios",
     },
     robots: {

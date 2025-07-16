@@ -3,13 +3,13 @@
   "short_name": "Smarty Studios",
   "description": "Professional Software Development & Consulting",
   "start_url": "/",
-  "display": "standalone",
+  "display": "browser",
   "background_color": "#000000",
   "theme_color": "#000000",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/minilogo.png",
+      "src": "/minilogo.webp",
       "sizes": "128x128",
       "type": "image/png"
     }

@@ -25,19 +25,19 @@ export default function ServicesSection() {
 
   const images = {
     "item-1": {
-      image: "/software.jpg",
+      image: "/software.webp",
       alt: "Custom Software Development",
     },
     "item-2": {
-      image: "/devops.jpg",
+      image: "/devops.webp",
       alt: "Scalable Architecture & DevOps",
     },
     "item-3": {
-      image: "/ux.jpg",
+      image: "/ux.webp",
       alt: "UI/UX Design & Frontend Development",
     },
     "item-4": {
-      image: "/mobile.jpg",
+      image: "/mobile.webp",
       alt: "Mobile & Cross-Platform Apps",
     },
     "item-5": {
@@ -138,6 +138,7 @@ export default function ServicesSection() {
                     alt={images[activeItem].alt}
                     width={1207}
                     height={929}
+                    priority={activeItem === "item-1"}
                   />
                 </motion.div>
               </AnimatePresence>

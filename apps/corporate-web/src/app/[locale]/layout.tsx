@@ -100,7 +100,7 @@ export async function generateMetadata({
     description: siteDescriptions.short,
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: `${companyInfo.name} - ${
@@ -121,7 +121,7 @@ export async function generateMetadata({
         : "Professional Software Development"
     }`,
     description: siteDescriptions.twitter,
-    images: ["/og-image.png"],
+    images: ["/og-image.webp"],
     creator: companyInfo.twitter,
   };
 
@@ -318,6 +318,23 @@ export default async function RootLayout({
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics gaId="G-4753ZHETCZ" />
+
+        {/* Service Worker Registration */}
+        <Script id="sw-registration" strategy="afterInteractive">
+          {`
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                  .then(function(registration) {
+                    console.log('SW registered: ', registration);
+                  })
+                  .catch(function(registrationError) {
+                    console.log('SW registration failed: ', registrationError);
+                  });
+              });
+            }
+          `}
+        </Script>
       </body>
     </html>
   );
