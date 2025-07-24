@@ -1,4 +1,5 @@
 import WhoWeAreSection from "./who-we-are-section";
+import OurTechnologiesSection from "./our-technologies-section";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
@@ -86,6 +87,8 @@ export default async function About() {
       </div>
 
       <WhoWeAreSection />
+
+      <OurTechnologiesSection />
     </section>
   );
 }
