@@ -52,6 +52,9 @@
       "smartEngineering": {
         "title": "Akıllı Mühendislik",
         "description": "Ekibimiz teknik uzmanlığı ürün yaklaşımıyla birleştirerek ölçeklenebilir ve sürdürülebilir çözümler geliştirir."
+      },
+      "usedTechnologies": {
+        "title": "Kullandığımız Teknolojiler"
       }
     }
   },

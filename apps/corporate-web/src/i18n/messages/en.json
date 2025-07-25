@@ -51,6 +51,9 @@
       "smartEngineering": {
         "title": "Smart Engineering",
         "description": "Our team combines technical expertise with product thinking to build scalable and sustainable solutions."
+      },
+      "usedTechnologies": {
+        "title": "Technologies We Use"
       }
     }
   },
